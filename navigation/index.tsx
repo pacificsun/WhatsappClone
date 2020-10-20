@@ -8,6 +8,10 @@ import { RootStackParamList } from '../types';
 import BottomTabNavigator from './BottomTabNavigator';
 import LinkingConfiguration from './LinkingConfiguration';
 
+import Color from '../constants/Colors'
+import { View } from '../components/Themed';
+import {Octicons, MaterialCommunityIcons} from '@expo/vector-icons'
+
 // If you are not familiar with React Navigation, we recommend going through the
 // "Fundamentals" guide: https://reactnavigation.org/docs/getting-started
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
@@ -26,8 +30,30 @@ const Stack = createStackNavigator<RootStackParamList>();
 
 function RootNavigator() {
   return (
-    <Stack.Navigator screenOptions={{ headerShown: false }}>
-      <Stack.Screen name="Root" component={BottomTabNavigator} />
+    <Stack.Navigator screenOptions={{ headerStyle:{
+      backgroundColor: Color.light.tint
+    },
+    headerTintColor: Color.light.background,
+    headerTitleAlign: "left",
+    headerTitleStyle:{
+      fontWeight:"bold"
+    }
+
+    }}>
+      <Stack.Screen 
+      name="Root" 
+      component={BottomTabNavigator}
+      options={{
+        title:"WhatsApp",
+        headerRight: () =>(
+          <View style={{flexDirection: "row", backgroundColor: Color.light.tint, width: 60, justifyContent:"space-between", marginRight: 10}}>
+            <Octicons name="search" size={22}  color={"white"}/>
+            <MaterialCommunityIcons name="dots-vertical" size={22}  color={"white"}/>
+          </View>
+        )
+      }}
+
+      />
       <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
     </Stack.Navigator>
   );
