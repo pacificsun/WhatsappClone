@@ -5,7 +5,7 @@ import { ColorSchemeName } from 'react-native';
 
 import NotFoundScreen from '../screens/NotFoundScreen';
 import { RootStackParamList } from '../types';
-import BottomTabNavigator from './BottomTabNavigator';
+import MainTabNavigator from './MainTabNavigator';
 import LinkingConfiguration from './LinkingConfiguration';
 
 import Color from '../constants/Colors'
@@ -42,7 +42,7 @@ function RootNavigator() {
     }}>
       <Stack.Screen 
       name="Root" 
-      component={BottomTabNavigator}
+      component={MainTabNavigator}
       options={{
         title:"WhatsApp",
         headerRight: () =>(
