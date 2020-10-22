@@ -21,11 +21,13 @@ const ChatListItem = (props: ChatListItemProps) => {
         <View style={styles.midContainer}>
           <Text style={styles.username}>{user.name}</Text>
           <Text numberOfLines={2} style={styles.lastMessage}>
-            {moment(chatRoom.lastMessage.content).format('DD/MM/YYYY')}
+            {chatRoom.lastMessage.content}
           </Text>
         </View>
       </View>
-      <Text style={styles.time}>{chatRoom.lastMessage.createdAt}</Text>
+      <Text style={styles.time}>
+        {moment(chatRoom.lastMessage.createdAt).fromNow()}
+      </Text>
       {/* <Text style={styles.time}>Yesterday</Text> */}
     </View>
   );
