@@ -83,7 +83,9 @@ function RootNavigator() {
       <Stack.Screen
         name="ChatRoom"
         component={ChatRoomScreen}
-        options={{ title: 'Char Room' }}
+        options={({ route }) => ({
+          title: route.params.name,
+        })}
       />
       <Stack.Screen
         name="NotFound"

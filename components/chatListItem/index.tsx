@@ -12,14 +12,14 @@ export type ChatListItemProps = {
 
 const ChatListItem = (props: ChatListItemProps) => {
   const { chatRoom } = props;
-  console.log('user>>', chatRoom);
+  // console.log('user>>', chatRoom);
   const user = chatRoom.users[1];
 
   const navigation = useNavigation();
 
   const onclick = () => {
     // console.warn(`Pressed on ${user.name}`);
-    navigation.navigate('ChatRoom');
+    navigation.navigate('ChatRoom', { id: chatRoom.id, name: user.name });
   };
   return (
     <TouchableWithoutFeedback onPress={onclick}>
