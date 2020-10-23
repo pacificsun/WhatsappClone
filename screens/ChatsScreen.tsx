@@ -6,7 +6,6 @@ import { Text, View } from '../components/Themed';
 
 import ChatListItem from '../components/chatListItem';
 import chatRooms from '../data/ChatRooms';
-import { Fontisto } from '@expo/vector-icons';
 
 export default function ChatsScreen() {
   return (
@@ -17,7 +16,6 @@ export default function ChatsScreen() {
         renderItem={({ item }) => <ChatListItem chatRoom={item} />}
         keyExtractor={(item) => item.id}
       />
-      {/* <ChatListItem chatRoom={chatRooms[0]} /> */}
     </View>
   );
 }
