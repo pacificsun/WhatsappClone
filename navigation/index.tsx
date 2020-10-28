@@ -56,7 +56,7 @@ function RootNavigator() {
       }}
     >
       <Stack.Screen
-        name="Root" // default name if not provided
+        name="Root" // default tab name if not provided
         component={MainTabNavigator}
         options={{
           title: 'WhatsApp',
