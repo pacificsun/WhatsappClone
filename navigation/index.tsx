@@ -16,7 +16,12 @@ import LinkingConfiguration from './LinkingConfiguration';
 
 import Color from '../constants/Colors';
 import { View } from '../components/Themed';
-import { Octicons, MaterialCommunityIcons } from '@expo/vector-icons';
+import {
+  Octicons,
+  MaterialCommunityIcons,
+  MaterialIcons,
+  FontAwesome5,
+} from '@expo/vector-icons';
 
 // If you are not familiar with React Navigation, we recommend going through the
 // "Fundamentals" guide: https://reactnavigation.org/docs/getting-started
@@ -85,6 +90,26 @@ function RootNavigator() {
         component={ChatRoomScreen}
         options={({ route }) => ({
           title: route.params.name,
+          headerRight: () => (
+            <View
+              style={{
+                flexDirection: 'row',
+                backgroundColor: Color.light.tint,
+                width: 100,
+                justifyContent: 'space-between',
+                marginRight: 10,
+              }}
+            >
+              <FontAwesome5 name="video" size={22} color={'white'} />
+              <MaterialIcons name="call" size={22} color={'white'} />
+
+              <MaterialCommunityIcons
+                name="dots-vertical"
+                size={22}
+                color={'white'}
+              />
+            </View>
+          ),
         })}
       />
       <Stack.Screen
