@@ -28,7 +28,7 @@ const ChatMessage = (props: ChatMessageProps) => {
           },
         ]}
       >
-        <Text>{message.user.id}</Text>
+        {!isMyMessage() && <Text>{message.user.name}</Text>}
         <Text>{message.content}</Text>
         <Text>{moment(message.createdAt).fromNow()}</Text>
       </View>
