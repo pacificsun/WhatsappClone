@@ -9,6 +9,7 @@ import { ColorSchemeName } from 'react-native';
 
 import NotFoundScreen from '../screens/NotFoundScreen';
 import ChatRoomScreen from '../screens/ChatRoomScreen';
+import ContactsScreen from '../screens/ContactsScreen';
 
 import { RootStackParamList } from '../types';
 import MainTabNavigator from './MainTabNavigator';
@@ -116,6 +117,7 @@ function RootNavigator() {
         component={NotFoundScreen}
         options={{ title: 'Oops!' }}
       />
+      <Stack.Screen name="Contacts" component={ContactsScreen} />
     </Stack.Navigator>
   );
 }

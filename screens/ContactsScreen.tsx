@@ -6,7 +6,7 @@ import ChatListItem from '../components/chatListItem';
 import chatRooms from '../data/ChatRooms';
 import NewMessageButton from '../components/NewMessageButton';
 
-export default function ChatsScreen() {
+export default function ContactsScreen() {
   return (
     <View style={styles.container}>
       <FlatList
