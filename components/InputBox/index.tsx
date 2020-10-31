@@ -17,7 +17,9 @@ const InputBox = () => {
   };
 
   const onSendPress = () => {
-    console.warn('On Send');
+    console.warn(`Sending: ${message}`);
+    // Send this message to backend
+    setMessage('');
   };
 
   const onPress = () => {
