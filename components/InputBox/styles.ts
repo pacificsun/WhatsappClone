@@ -5,15 +5,16 @@ const styles = StyleSheet.create({
     container:{
         flexDirection:"row",
         margin: 10,
+        alignItems: "flex-end"
     },
     mainContainer:{
         flexDirection:"row",
         backgroundColor:"white",
         padding: 10,
-        borderRadius: 50,
+        borderRadius: 25,
         marginRight: 10,
         flex:1,
-        alignItems:"center"
+        alignItems:"flex-end"
 
       },
       textInput:{
