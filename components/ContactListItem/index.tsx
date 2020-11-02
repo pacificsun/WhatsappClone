@@ -6,7 +6,7 @@ import { useNavigation } from '@react-navigation/native';
 
 import styles from './style';
 export type ConatactListItemProps = {
-  user: User;
+  user: User; // giving types to user
 };
 
 const ContactListItem = (props: ConatactListItemProps) => {
@@ -24,6 +24,7 @@ const ContactListItem = (props: ConatactListItemProps) => {
           <Image source={{ uri: user.imageUri }} style={styles.avatar} />
           <View style={styles.midContainer}>
             <Text style={styles.username}>{user.name}</Text>
+            <Text style={styles.status}>{user.status}</Text>
           </View>
         </View>
       </View>

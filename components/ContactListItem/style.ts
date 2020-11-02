@@ -23,7 +23,11 @@ leftContainer:{
 },
 midContainer:{
     justifyContent:"space-around"
-}
+},
+status:{
+    fontSize: 16,
+    color: "grey"
+},
 })
 
 export default styles;

@@ -8,9 +8,11 @@ import styles from './styles';
 
 const NewMessageButton = () => {
   const navigation = useNavigation();
+
   const onPress = () => {
     navigation.navigate('Contacts');
   };
+
   return (
     <View style={styles.container}>
       <TouchableOpacity onPress={onPress}>
